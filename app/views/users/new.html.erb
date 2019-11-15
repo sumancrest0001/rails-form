@@ -1,2 +1,15 @@
 <h1>Users#new</h1>
 <p>This page create new users</p>
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  
+  <label for="name">Name</label>
+  <input id="name" type="text" name="user[name]"><br>
+  
+  <label for="email">Email</label>
+  <input id="email" type="email" name="user[email]"><br>
+  
+  <label for="password">Password</label>
+  <input id="password" type="password" name="user[password]"><br>
+  <input type="submit" value="Create New User">
+</form>
