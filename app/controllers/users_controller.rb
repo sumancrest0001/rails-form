@@ -2,16 +2,22 @@ class UsersController < ApplicationController
   def new
     @user= User.new
   end
+  
+  def show
+    @user = User.find(params[:id])
+  end
 
-  # /users
   def create
     @user = User.new(user_params)
-    #@user = User.new(name: params[:name], email: params[:email], password: params[:password])
+    
     if @user.save
-      redirect_to new_user_path  # goes /users/new
+      redirect_to users_url(@user)
     else
-      render :new
+      render 'new'
     end
+  end
+  
+  def edit
   end
 
   private
