@@ -1,7 +1,9 @@
-<h1>New User</h1>
+<h1>Edit User</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    
     <%= form_for(@user) do |f| %>
+    <input name="_method" type="hidden" value="patch" />
     <%= render 'shared/error_messages' %>
     
       <%= f.label :name %>
@@ -13,7 +15,8 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %><br>
 
-      <%= f.submit "Create User", class: "btn btn-primary" %>
+      <%= f.submit "Update User", class: "btn btn-primary" %>
+  </div>
      <% end %>
    </div>
  </div>
