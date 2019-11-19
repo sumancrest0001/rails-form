@@ -1,0 +1,56 @@
+
+<!-- #form_tag implementation
+
+<#%= form_tag({controller: "users", action: "create" }, method: "post") do %>
+
+  <#%= label_tag :name %>
+  <#%= text_field(:user, :name) %><br>
+      
+  <#%= label_tag :email %>
+  <#%= text_field(:user, :email) %><br>
+
+  <#%= label_tag :password %>
+  <#%= password_field(:user, :password) %><br>
+
+  <#%= submit_tag "Create User", class: "btn btn-primary" %>
+<#% end %>
+-->
+    
+<!-- #HTML form implementation
+<form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="nrkYi9JCYx/aIWXSpV/CMity3RIrc0LCtENA1pjnO2f0iEGCMrWVGS7r8+KBGsI+A3FY/PGfW67jeyhYoKuTVw==">
+    
+    
+      <label for="user_name">Name</label>
+      <input class="form-control" type="text" name="user[name]" id="user_name"><br>
+
+      <label for="user_email">Email</label>
+      <input class="form-control" type="email" name="user[email]" id="user_email"><br>
+
+      <label for="user_password">Password</label>
+      <input class="form-control" type="password" name="user[password]" id="user_password"><br>
+
+      <input type="submit" name="commit" value="Create User" class="btn btn-success" data-disable-with="Create User">
+</form> -->
+
+<!-- #form_for implementation -->
+
+<h1 class="text-center">New User</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+    
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %><br>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %><br>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %><br>
+
+      <%= f.submit "Create User", class: "btn btn-success" %>
+     <% end %>
+   </div>
+ </div>
+

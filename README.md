@@ -1,24 +1,25 @@
 # README
+# Project-Rails-Form
+MicroverseThis is the fifth project (collaborative) of the Main Ruby on Rails curriculum at [Microverse](https://www.microverse.org/) - @microverseinc
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* The goal was to create a rails project with basic user sign up, edit and update implementations.
 
-Things you may want to cover:
+* The project was completed using Rails 5.1.6 and Bootstrap
 
-* Ruby version
 
-* System dependencies
+##Language Used
+###Ruby
+###SQl lite 
+###HTML & CSS
 
-* Configuration
+# How to install
+### git clone https://github.com/sumancrest0001/rails-form.git
+### cd rails_form
+### open it in you text editor and you can go through the files
 
-* Database creation
+# Contributors
+### sumancrest0001 (https://github.com/sumancrest0001)
+###noomdalv (https://github.com/noomdalv)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# License
+MIT Licensed
