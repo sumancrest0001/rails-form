@@ -1,3 +1,23 @@
+
+<!-- #form_tag implementation
+
+<#%= form_tag({controller: "users", action: "create" }, method: "post") do %>
+
+  <#%= label_tag :name %>
+  <#%= text_field(:user, :name) %><br>
+      
+  <#%= label_tag :email %>
+  <#%= text_field(:user, :email) %><br>
+
+  <#%= label_tag :password %>
+  <#%= password_field(:user, :password) %><br>
+
+  <#%= submit_tag "Create User", class: "btn btn-primary" %>
+<#% end %>
+-->
+    
+<!-- #form_for implementation -->
+
 <h1 class="text-center">New User</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -17,3 +37,4 @@
      <% end %>
    </div>
  </div>
+
